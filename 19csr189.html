@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+
+
+    <!-- icons links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!-- google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+
+
+    <!-- bootstrap links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <style>
+        .textinnav {
+            color: aliceblue;
+            font-size: 1.5rem;
+            padding: 2%;
+            font-family: 'Scheherazade New';
+        }
+        
+        .textinnav:hover {
+            color: rgb(138, 200, 255);
+        }
+        
+        .navbar-whole-class {
+            background-image: url("https://www.transparenttextures.com/patterns/vichy.png");
+        }
+        
+        @media (min-width: 992px) {
+            .navbar-expand-lg .navbar-nav .nav-link {
+                padding-right: 1.5rem;
+                padding-left: 1.5rem;
+            }
+        }
+        /* home */
+        
+        #home {
+            background-image: url("https://www.transparenttextures.com/patterns/mirrored-squares.png");
+        }
+        
+        .home {
+            padding: 3.5% 1%;
+        }
+        
+        .listContent {
+            font-family: 'Padauk';
+            font-weight: lighter;
+        }
+        
+        .listHeading {
+            font-family: 'IBM Plex Serif';
+            font-weight: bolder;
+            font-size: 20px;
+            color: #000550;
+        }
+        /* ----------------------- LOGIN ----------------------- */
+        
+        h1 {
+            font-family: 'Titan One';
+            color: rgb(255, 207, 144);
+            text-align: center;
+        }
+        
+        #login {
+            background-color: #000438;
+            background-image: url("https://www.transparenttextures.com/patterns/white-texture.png");
+        }
+        
+        .my-login-page .card-wrapper {
+            width: 400px;
+        }
+        
+        .card-wrapper {
+            padding-top: 10%;
+        }
+        
+        .card {
+            border-color: transparent;
+            box-shadow: 0 4px 8px rgb(0, 0, 0);
+            border-radius: 50px;
+        }
+        
+        .card.fat {
+            padding: 10px;
+            padding-top: 0;
+        }
+        
+        .card .card-title {
+            margin-bottom: 30px;
+        }
+        
+        .form-group label {
+            width: 100%;
+        }
+        
+        .btn-index {
+            padding: 12px 10px;
+        }
+        
+        .login-whole {
+            padding: 3% 30%;
+            padding-bottom: 5%;
+        }
+        
+        @media screen and (max-width: 425px) {
+            .card-wrapper {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+        
+        @media screen and (max-width: 320px) {
+            .card.fat {
+                padding: 0;
+            }
+            .card.fat .card-body {
+                padding: 15px;
+            }
+        }
+        
+        @media screen and (max-width: 720px) {
+            .login-whole {
+                padding: 5% 10%;
+            }
+        }
+        /* form */
+        
+        .switch-bar {
+            border: 0;
+            text-align: center;
+            padding: 1.5% 0;
+            background-color: #999999;
+            cursor: pointer;
+        }
+        
+        #loginBar :hover,
+        #signupBar :hover {
+            color: #00076d;
+            font-size: 2rem;
+            padding: 0 0;
+        }
+        
+        .switch-text {
+            font-family: 'PT Sans Narrow';
+            font-weight: bolder;
+            font-size: 2rem;
+            padding: 2% 0;
+        }
+        
+        .white {
+            background-color: #c3c3c3;
+            ;
+            color: black;
+        }
+        
+        .round-edge-lt {
+            border-top-left-radius: 50px;
+        }
+        
+        .round-edge-rt {
+            border-top-right-radius: 50px;
+        }
+        
+        .formTopCls {
+            margin-top: 5%;
+        }
+        
+        @media screen and (max-width: 576px) {
+            .vl {
+                border-left: none;
+            }
+            .switch-bar {
+                padding: 0.5% 0;
+            }
+            .round-edge-lt {
+                border-top-right-radius: 50px;
+            }
+            .round-edge-rt {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+        
+        .hand {
+            cursor: pointer;
+        }
+        
+        .popup {
+            background-image: linear-gradient(to bottom, #ff0000, #f70000, #ee0000, #e60000, #de0000, #d50000, #cc0001, #c30001, #b80001, #ac0001, #a10001, #960000);
+            color: white;
+            padding: 0 5%;
+            text-align: center;
+            font-size: large;
+        }
+        
+        .popup-head {
+            padding: 1% 0;
+        }
+        
+        .deactive {
+            display: none;
+        }
+        /* -----------------------    <!-- Appointment Booking --> ----------------------- */
+        
+        #Appointment {
+            background-color: #ffffff;
+            background-image: url("https://www.transparenttextures.com/patterns/fabric-of-squares.png");
+        }
+        
+        .Appointment-whole {
+            padding: 3% 10%;
+            padding-bottom: 2%;
+        }
+        
+        .Appointment-head {
+            color: #00076d;
+            text-align: center;
+        }
+        
+        .Appointment-inner {
+            padding: 2% 0;
+        }
+        
+        .btn-app {
+            margin-top: 2%;
+        }
+        
+        .borderDiv {
+            padding: 2% 2%;
+            margin-top: 5%;
+        }
+        
+        .WorkingDiv {
+            text-align: center;
+            margin-top: 4%;
+        }
+        
+        .fa-check-double {
+            color: white;
+            padding: 15% 15%;
+            border-radius: 50%;
+        }
+        
+        .leftArrow {
+            margin-top: 2%;
+            padding: 10% 10%;
+            background-color: rgb(167, 167, 167);
+            border-radius: 50%;
+            color: white;
+            background-image: linear-gradient(to right top, #00ff62, #00d960, #00b55b, #009151, #006e45);
+        }
+        
+        .leftArrow:hover {
+            font-size: 2rem;
+            padding: 10% 10%;
+            color: white;
+        }
+        
+        .app-boder-font {
+            font-family: 'Noto Serif';
+            font-weight: bolder;
+        }
+        /* -----------------------   Doctor Availability ----------------------- */
+        
+        #DoctorAvailability {
+            background-color: #000229;
+            background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+        }
+        
+        .DocAva-head {
+            color: wheat;
+        }
+        
+        .avai-Div {
+            padding: 3% 20%;
+        }
+        
+        .DrwholeDiv {
+            padding: 2% 0;
+        }
+        /* -----------------------   Doctor Availability ----------------------- */
+        
+        .amb-whole {
+            background-color: #ffffff;
+            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+            padding: 4% 0;
+        }
+        
+        .amb-Heading {
+            color: #000438;
+        }
+        
+        .amb-paddingDiv {
+            padding: 5% 20%;
+        }
+        
+        .upDiv {
+            margin-top: 2%;
+            margin-right: 2%;
+            text-align: right;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <section id="Nav-bar-section">
+        <nav class="navbar navbar-expand-lg bg-dark text-warning navbar-whole-class ">
+            <div class="container">
+                <p class="navbar-brand"><i class="fab fa-stripe-s"></i><i class="fab fa-edge-legacy"></i> Hospital</p>
+                <!-- makes the text right  -->
+                <div class="w-80 text-right ">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <!-- phone view - right  -->
+                    <div class="navbar-nav mx-auto text-right">
+                        <a href="#homepage" class="nav-link nav-link-ltr textinnav ">Home</a>
+                        <a href="#Appointment" class="nav-link nav-link-ltr textinnav ">Appointment Booking</a>
+                        <a href="#DoctorAvailability" class="nav-link nav-link-ltr textinnav ">Doctor Availability</a>
+                        <a href="#AmbulanceBooking" class="nav-link nav-link-ltr textinnav ">Ambulance Booking</a>
+                    </div>
+                    <a href="#login">
+                        <button type="button" class="btn btn-outline-light">Login</button>
+                    </a>
+                    <!-- <i class="fas fa-user-tie"></i>sdfsdf -->
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Homepage -->
+    <section id="home">
+        <div class="home container" id="title-section">
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <img width="530" data-src="https://cdn.apollohospitals.com/dev-apollohospitals/2021/04/apollohealthcare.jpg" class=".img-fluid. max-width: 100%; home-img" src="https://cdn.apollohospitals.com/dev-apollohospitals/2021/04/apollohealthcare.jpg">
+                </div>
+                <div class="col-lg-6 ">
+                    <p>
+                        WHO WE ARE
+                    </p>
+                    <p class="listHeading">
+                        Why SE Healthcare?
+                    </p>
+                    <p class="listContent">
+                        Established by Dr Santhosh C Reddy in 1983, SE Healthcare has a robust presence across the healthcare ecosystem. From routine wellness & preventive health care to innovative life-saving treatments and diagnostic services, SE Hospitals has touched more
+                        than 120 million lives from over 120 countries, offering the best clinical outcomes.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p class="listHeading">
+                                <i class="fas fa-angle-double-right"></i> 7,000+
+                            </p>
+                            <p class="listContent">
+                                Healing Hands Largest network of the world’s finest and brightest medical experts who provide compassionate care using outstanding expertise and advanced technology.
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="listHeading">
+                                <i class="fas fa-angle-double-right"></i> 4,000+ Pharmacies
+                            </p>
+                            <p class="listContent">
+                                Apollo Pharmacy is India’s first, largest and most trusted branded pharmacy network, with over 4000 plus outlets covering the entire nation
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="listHeading">
+                                <i class="fas fa-angle-double-right"></i> Most Advanced Healthcare Technology
+                            </p>
+                            <p class="listContent">
+                                Apollo Hospitals has been the pioneer in bringing ground-breaking healthcare technologies to India.
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="listHeading">
+                                <i class="fas fa-angle-double-right"></i> Best Clinical Outcomes
+                            </p>
+                            <p class="listContent">
+                                Leveraging its vast medical expertise & technological advantage, Apollo Hospitals has consistently delivered best in class clinical outcomes.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="sticky-top upDiv">
+        <a href="#title-section">
+            <i class="fas fa-angle-double-up fa-2x text-warning"></i>
+        </a>
+    </div>
+
+    <!-- Signup/login -->
+    <section id="login">
+        <!-- Signup -->
+        <div class="login-whole">
+            <h1><i class="fas fa-user-tie"></i> Register</h1>
+            <div class="card-wrapper">
+                <div class="card-body card fat container-fluid">
+                    <div class="switch-form">
+                        <div class="row">
+                            <div id="signupBar" class="col-lg-6 col-md-6 col-sm-6 col-xs-6  switch-bar round-edge-lt white">
+                                <h6 id="signupTxt" class="switch-text text-decoration-underline" onclick=signup()>Sign up</h6>
+                            </div>
+                            <div id="loginBar" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 round-edge switch-bar  round-edge-rt">
+                                <h6 id="loginTxt" class="switch-text" onclick=login()>Login</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- signupForm -->
+                    <div id="signupForm">
+                        <form action="/signup" method="POST" class="my-login-validation">
+                            <div class="form-group formTopCls">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" name="name" required autofocus>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">E-Mail Address</label>
+                                <input type="email" class="form-control" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" name="password" required data-eye>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ph">Phone No.</label>
+                                <input type="number" class="form-control" name="phonenumber" required data-eye>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="custom-checkbox custom-control">
+                                    <input type="checkbox" name="agree" id="agree" class="custom-control-input" required="">
+                                    <label for="agree" class="custom-control-label">I agree to the <a href="#">Terms and Conditions</a></label>
+                                </div>
+                            </div>
+
+                            <div class="form-group m-0">
+                                <button type="submit" class="btn btn-primary btn-block btn-index">
+                        Submit
+                    </button>
+                            </div>
+                            <div class="mt-4 text-center">
+                                Already have an account? <a href="#">Login</a>
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <!-- loginForm -->
+                    <div id="loginForm" class="deactive">
+                        <form action="/login" method="POST" class="my-login-validation" novalidate="">
+
+                            <div class="form-group formTopCls">
+                                <label for="email">E-Mail Address</label>
+                                <input type="email" class="form-control" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" name="password" required data-eye>
+                            </div>
+
+                            <div class="form-group m-0">
+                                <button type="submit" class="btn btn-primary btn-block btn-index">
+                        Login
+                    </button>
+                            </div>
+                            <div class="mt-4 text-center">
+                                <h6 class="hand" onclick=login()>link</h6>
+                                Don't have an account? <a href="#">Login</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking -->
+    <section id="Appointment">
+        <div class="Appointment-whole">
+            <h1 class="Appointment-head"><i class="fas fa-book-medical"></i> Appointment Booking</h1>
+            <div class="border border-dark borderDiv">
+                <h2 class="app-boder-font">How it Works?</h2>
+                <h3 class="app-boder-font">Get an appointment in four easy steps</h3>
+                <div class="row WorkingDiv">
+                    <div class=" col-lg-2">
+                        <i class="fas fa-2x  fa-map-marker-alt "></i>
+                        <p>Select Location & Hospital</p>
+                    </div>
+
+                    <div class="col-lg-1">
+                        <i class="fas fa-angle-double-right leftArrow "></i>
+                    </div>
+
+                    <div class=" col-lg-2">
+                        <i class="fas fa-2x  fa-user-md"></i>
+                        <p>Choose doctor & your preferred slot</p>
+
+                    </div>
+
+                    <div class="col-lg-1">
+                        <i class="fas fa-angle-double-right leftArrow"></i>
+                    </div>
+
+                    <div class=" col-lg-2">
+                        <i class="fas fa-2x  fa-user-check"></i>
+                        <p>Verify your mobile number</p>
+                    </div>
+
+                    <div class="col-lg-1">
+                        <i class="fas fa-angle-double-right leftArrow"></i>
+                    </div>
+
+                    <div class=" col-lg-2">
+                        <i class="far fa-2x  fa-list-alt"></i>
+                        <p>Appointment Done appointment confirmed</p>
+                    </div>
+
+                    <div class="col-lg-1">
+                        <i class="fas fa-check-double bg-success fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 Appointment-inner">
+                <form id="msgform">
+                    <div class="row">
+                        <div class="col-lg-6 mb-3">
+                            <label for="fname" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="fname">
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <label for="lname" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="lname">
+                        </div>
+
+                        <div class="col-lg-6 mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <label for="lname" class="form-label">Mobile Number</label>
+                            <input type="text" class="form-control" id="ph.no">
+                        </div>
+
+                        <div class="col-lg-8">
+                            <label for="email" class="form-label ">City</label>
+                            <select formcontrolname="city" class="form-control myselect h46 ng-pristine ng-invalid ng-touched"><option  value="">Select</option><optgroup  label="Top Cities"><option  value="3015" class="ng-star-inserted"> Bangalore </option><option  value="1" class="ng-star-inserted"> Chennai </option><option  value="2741" class="ng-star-inserted"> Delhi </option><option  value="12" class="ng-star-inserted"> Hyderabad </option><option  value="13" class="ng-star-inserted"> Kolkata </option><option  value="3989" class="ng-star-inserted"> Mumbai </option><!----></optgroup><optgroup  label="Other Cities"><option  value="2761" class="ng-star-inserted"> Ahmedabad </option><option  value="4395" class="ng-star-inserted"> Amritsar </option><option  value="95" class="ng-star-inserted"> Aragonda </option><option  value="3897" class="ng-star-inserted"> Aurangabad </option><option  value="6374" class="ng-star-inserted"> Bhilai </option><option  value="4199" class="ng-star-inserted"> Bhubaneswar </option><option  value="6373" class="ng-star-inserted"> Bilaspur </option><option  value="4413" class="ng-star-inserted"> Chandigarh </option><option  value="3309" class="ng-star-inserted"> Cochin </option><option  value="4791" class="ng-star-inserted"> Coimbatore </option><option  value="5867" class="ng-star-inserted"> Dehradun </option><option  value="2803" class="ng-star-inserted"> Gandhinagar </option><option  value="5899" class="ng-star-inserted"> Ghaziabad </option><option  value="5907" class="ng-star-inserted"> Gorakhpur </option><option  value="545" class="ng-star-inserted"> Guntur </option><option  value="2899" class="ng-star-inserted"> Gurugram </option><option  value="2207" class="ng-star-inserted"> Guwahati </option><option  value="3699" class="ng-star-inserted"> Gwalior </option><option  value="3707" class="ng-star-inserted"> Indore </option><option  value="4539" class="ng-star-inserted"> Jaipur </option><option  value="663" class="ng-star-inserted"> Kakinada </option><option  value="3371" class="ng-star-inserted"> Kannur </option><option  value="5939" class="ng-star-inserted"> Kanpur </option><option  value="4945" class="ng-star-inserted"> Karaikudi </option><option  value="753" class="ng-star-inserted"> Karim Nagar </option><option  value="4951" class="ng-star-inserted"> Karur </option><option  value="5955" class="ng-star-inserted"> Lucknow </option><option  value="5081" class="ng-star-inserted"> Madurai </option><option  value="3175" class="ng-star-inserted"> Mysore </option><option  value="3991" class="ng-star-inserted"> Nagpur </option><option  value="3999" class="ng-star-inserted"> Nasik </option><option  value="1223" class="ng-star-inserted"> Nellore </option><option  value="6009" class="ng-star-inserted"> Noida </option><option  value="2649" class="ng-star-inserted"> Patna </option><option  value="4007" class="ng-star-inserted"> Pune </option><option  value="6388" class="ng-star-inserted"> Raipur </option><option  value="6303" class="ng-star-inserted"> Siliguri </option><option  value="2867" class="ng-star-inserted"> Surat </option><option  value="4037" class="ng-star-inserted"> Thane </option><option  value="1827" class="ng-star-inserted"> Tirupati </option><option  value="5641" class="ng-star-inserted"> Trichy </option><option  value="3571" class="ng-star-inserted"> Trivandrum </option><option  value="2873" class="ng-star-inserted"> Vadodara </option><option  value="6081" class="ng-star-inserted"> Varanasi </option><option  value="1983" class="ng-star-inserted"> Visakhapatnam </option><option  value="2003" class="ng-star-inserted"> Warangal </option><!----></optgroup></select>
+                        </div>
+                    </div>
+                    <div class="btn-app">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Availability -->
+    <section>
+        <div class="DrwholeDiv" id="DoctorAvailability">
+            <h1 class="DocAva-head"><i class="fas fa-user-md"></i> Doctor Availability</h1>
+            <div class="avai-Div">
+                <form class="form-signin">
+
+                    <div class="col-lg-8 mb-3">
+                        <label for="DrName" class="form-label text-light">Doctor Name</label>
+                        <select id="DrName" class="form-control">
+                            <option value=""> Dr. William A. Abdu, M.D, M.S.</option>
+                            <option value="">Dr. Myles. B. Abbott, M.D.</option>
+                            <option value="">Dr. Fouad. M. Abbas, M.D.</option>
+                            <option value="">Dr. Khalid Abbed, M.D.</option>
+                            <option value=""> Dr. Naresh Trehan</option>
+                            <option value=""> Dr. Arthur Reese Abright, M.D.</option>
+                          </select>
+                    </div>
+
+                    <div class="col-lg-8 mb-3">
+                        <label for="inputPassword" class="form-label text-light">Date</label>
+                        <input type="date" id="inputPassword" class="form-control" required>
+                    </div>
+
+                    <div class="col-lg-8 mb-3">
+                        <label for="inputPassword" class="form-label text-light">Time</label>
+                        <input type="time" id="inputPassword" class="form-control" required>
+                    </div>
+
+                    <div class="col-lg-8 mb-3">
+                        <label for="inputPassword" class="form-label text-light">Email ID</label>
+                        <input type="email" id="inputPassword" class="form-control" required>
+                    </div>
+                    <div class="col-lg-5">
+                        <button class="btn btn-lg btn-warning btn-block" type="submit">Check Availability</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ambulance Booking -->
+    <section>
+        <div class="amb-whole" id="AmbulanceBooking">
+            <h1 class="amb-Heading"><i class="fas fa-ambulance"></i> Ambulance Booking</h1>
+            <div class="amb-paddingDiv">
+                <form class="form-signin">
+
+                    <div class="col-lg-8 mb-3">
+                        <label for="inputEmail" class="form-label text-dark">Name</label>
+                        <input type="email" id="inputEmail" class="form-control" required autofocus>
+                    </div>
+
+                    <div class="col-lg-8 mb-3">
+                        <label for="inputPassword" class="form-label text-dark">Phone Number</label>
+                        <input type="password" id="inputPassword" class="form-control" required>
+                    </div>
+
+                    <div class="col-lg-8 mb-3">
+                        <label for="inputPassword" class="form-label text-dark">Address</label>
+                        <input type="password" id="inputPassword" class="form-control" required>
+                    </div>
+
+                    <div class="col-lg-8 mb-3">
+                        <label for="inputPassword" class="form-label text-dark">PinCode</label>
+                        <input type="password" id="inputPassword" class="form-control" required>
+                    </div>
+                    <div class="col-lg-5">
+                        <button class="btn btn-lg btn-danger btn-block" type="submit">Book Ambulance</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <footer>
+        <div class="text-center">
+            <p>
+                Sowbhakian E S - 19CSR189
+            </p>
+            <p>
+                Software Engineering - Assignment
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+    <!-- Bootstrap JS -->
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+
+    <script>
+        // Sign in - Login form
+
+
+        function signup() {
+            $("#signupForm").removeClass("deactive")
+            $("#loginForm").addClass("deactive")
+
+            $("#signupBar").addClass("white")
+            $("#loginBar").removeClass("white")
+
+            $("#loginTxt").removeClass("text-decoration-underline")
+            $("#signupTxt").addClass("text-decoration-underline")
+
+        }
+
+        function login() {
+            $("#signupForm").addClass("deactive")
+            $("#loginForm").removeClass("deactive")
+
+            $("#signupBar").removeClass("white")
+            $("#loginBar").addClass("white")
+
+            $("#signupTxt").removeClass("text-decoration-underline")
+            $("#loginTxt").addClass("text-decoration-underline")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+.textinnav {
+    color: aliceblue;
+    font-size: 1.5rem;
+    padding: 2%;
+    font-family: 'Scheherazade New';
+}
+
+.textinnav:hover {
+    color: rgb(138, 200, 255);
+}
+
+.navbar-whole-class {
+    background-image: url("https://www.transparenttextures.com/patterns/vichy.png");
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+
+
+/* home */
+
+#home {
+    background-image: url("https://www.transparenttextures.com/patterns/mirrored-squares.png");
+}
+
+.home {
+    padding: 3.5% 1%;
+}
+
+.listContent {
+    font-family: 'Padauk';
+    font-weight: lighter;
+}
+
+.listHeading {
+    font-family: 'IBM Plex Serif';
+    font-weight: bolder;
+    font-size: 20px;
+    color: #000550;
+}
+
+
+/* ----------------------- LOGIN ----------------------- */
+
+h1 {
+    font-family: 'Titan One';
+    color: rgb(255, 207, 144);
+    text-align: center;
+}
+
+#login {
+    background-color: #000438;
+    background-image: url("https://www.transparenttextures.com/patterns/white-texture.png");
+}
+
+.my-login-page .card-wrapper {
+    width: 400px;
+}
+
+.card-wrapper {
+    padding-top: 10%;
+}
+
+.card {
+    border-color: transparent;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    border-radius: 50px;
+}
+
+.card.fat {
+    padding: 10px;
+    padding-top: 0;
+}
+
+.card .card-title {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    width: 100%;
+}
+
+.btn-index {
+    padding: 12px 10px;
+}
+
+.login-whole {
+    padding: 3% 30%;
+    padding-bottom: 5%;
+}
+
+@media screen and (max-width: 425px) {
+    .card-wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card.fat {
+        padding: 0;
+    }
+    .card.fat .card-body {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .login-whole {
+        padding: 5% 10%;
+    }
+}
+
+
+/* form */
+
+.switch-bar {
+    border: 0;
+    text-align: center;
+    padding: 1.5% 0;
+    background-color: #999999;
+    cursor: pointer;
+}
+
+#loginBar :hover,
+#signupBar :hover {
+    color: #00076d;
+    font-size: 2rem;
+    padding: 0 0;
+}
+
+.switch-text {
+    font-family: 'PT Sans Narrow';
+    font-weight: bolder;
+    font-size: 2rem;
+    padding: 2% 0;
+}
+
+.white {
+    background-color: #c3c3c3;
+    ;
+    color: black;
+}
+
+.round-edge-lt {
+    border-top-left-radius: 50px;
+}
+
+.round-edge-rt {
+    border-top-right-radius: 50px;
+}
+
+.formTopCls {
+    margin-top: 5%;
+}
+
+@media screen and (max-width: 576px) {
+    .vl {
+        border-left: none;
+    }
+    .switch-bar {
+        padding: 0.5% 0;
+    }
+    .round-edge-lt {
+        border-top-right-radius: 50px;
+    }
+    .round-edge-rt {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+
+.hand {
+    cursor: pointer;
+}
+
+.popup {
+    background-image: linear-gradient(to bottom, #ff0000, #f70000, #ee0000, #e60000, #de0000, #d50000, #cc0001, #c30001, #b80001, #ac0001, #a10001, #960000);
+    color: white;
+    padding: 0 5%;
+    text-align: center;
+    font-size: large;
+}
+
+.popup-head {
+    padding: 1% 0;
+}
+
+.deactive {
+    display: none;
+}
+
+
+/* -----------------------    <!-- Appointment Booking --> ----------------------- */
+
+#Appointment {
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/fabric-of-squares.png");
+}
+
+.Appointment-whole {
+    padding: 3% 10%;
+    padding-bottom: 2%;
+}
+
+.Appointment-head {
+    color: #00076d;
+    text-align: center;
+}
+
+.Appointment-inner {
+    padding: 2% 0;
+}
+
+.btn-app {
+    margin-top: 2%;
+}
+
+.borderDiv {
+    padding: 2% 2%;
+    margin-top: 5%;
+}
+
+.WorkingDiv {
+    text-align: center;
+    margin-top: 4%;
+}
+
+.fa-check-double {
+    color: white;
+    padding: 15% 15%;
+    border-radius: 50%;
+}
+
+.leftArrow {
+    margin-top: 2%;
+    padding: 10% 10%;
+    background-color: rgb(167, 167, 167);
+    border-radius: 50%;
+    color: white;
+    background-image: linear-gradient(to right top, #00ff62, #00d960, #00b55b, #009151, #006e45);
+}
+
+.leftArrow:hover {
+    font-size: 2rem;
+    padding: 10% 10%;
+    color: white;
+}
+
+.app-boder-font {
+    font-family: 'Noto Serif';
+    font-weight: bolder;
+}
+
+
+/* -----------------------   Doctor Availability ----------------------- */
+
+#DoctorAvailability {
+    background-color: #000229;
+    background-image: url("https://www.transparenttextures.com/patterns/snow.png");
+}
+
+.DocAva-head {
+    color: wheat;
+}
+
+.avai-Div {
+    padding: 3% 20%;
+}
+
+.DrwholeDiv {
+    padding: 2% 0;
+}
+
+
+/* -----------------------   Doctor Availability ----------------------- */
+
+.amb-whole {
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+    padding: 4% 0;
+}
+
+.amb-Heading {
+    color: #000438;
+}
+
+.amb-paddingDiv {
+    padding: 5% 20%;
+}
+
+.upDiv {
+    margin-top: 2%;
+    margin-right: 2%;
+    text-align: right;
+}
